@@ -7,7 +7,7 @@ using namespace std;
 
 class ChoiceButton {
 private:
-	string menuTitle;
+	string buttonName;
 public:
 	void setName(string c);
 	string getName();

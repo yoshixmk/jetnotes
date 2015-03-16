@@ -3,10 +3,10 @@
 using namespace std;
 
 void SelectButton::setName(string c) {
-	menuTitle = c;
+	buttonName = c;
 }
 
 string SelectButton::getName() {
-	return menuTitle;
+	return buttonName;
 }
 
