@@ -14,4 +14,4 @@ $(TARGET) : $(OBJ)
 	$(CC) $(OBJ)
 
 clean : $(OBJ)
-	del $(OBJ) *.tds $(TARGET)
+    del $(OBJ) *.tds $(TARGET)

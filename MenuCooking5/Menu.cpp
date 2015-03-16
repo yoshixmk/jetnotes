@@ -11,5 +11,15 @@ void Menu::thinkingMenu() {
 	cout << choiceButton1.getName() << "‚ª‰Ÿ‚³‚ê‚Ü‚µ‚½\n";
 	cout << choiceButton2.getName() << "‚ª‰Ÿ‚³‚ê‚Ü‚µ‚½\n";
 	cout << selectButton.getName() << "‚ÅŒˆ’è‚³‚ê‚Ü‚µ‚½\n";
+
+	if(selectButton.touchButton() == 1)
+	    cout << "“_“”‚µ‚Ü‚µ‚½\n";
+	else
+        cout << "Á“”‚µ‚Ü‚µ‚½\n";
+
+    if(selectButton.touchButton() == 1)
+    	    cout << "“_“”‚µ‚Ü‚µ‚½\n";
+    	else
+            cout << "Á“”‚µ‚Ü‚µ‚½\n";
 }
 

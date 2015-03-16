@@ -8,8 +8,11 @@ using namespace std;
 class SelectButton {
 private:
 	string buttonName;
+	bool lightingStatus;
 public:
+    SelectButton();
 	void setName(string c);
 	string getName();
+	bool touchButton();
 };
 #endif

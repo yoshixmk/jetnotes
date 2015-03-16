@@ -8,6 +8,7 @@ using namespace std;
 class ChoiceButton {
 private:
 	string buttonName;
+	//bool lightingStatus;
 public:
 	void setName(string c);
 	string getName();
