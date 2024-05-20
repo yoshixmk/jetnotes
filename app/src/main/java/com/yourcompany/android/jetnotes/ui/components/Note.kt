@@ -2,6 +2,9 @@ package com.yourcompany.android.jetnotes.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Checkbox
@@ -14,18 +17,26 @@ import com.yourcompany.android.jetnotes.theme.green
 
 @Composable
 fun Note() {
-  Box(
-    modifier = Modifier
-      .size(40.dp)
-      .background(green)
-  )
-  Text(text = "Title", maxLines = 1)
-  Text(text = "Content", maxLines = 1)
-  Checkbox(
-    checked = false,
-    onCheckedChange = { },
-    modifier = Modifier.padding(start = 8.dp)
-  )
+  Row(
+    modifier = Modifier.fillMaxWidth()
+  ) {
+    Box(
+      modifier = Modifier
+        .size(40.dp)
+        .background(green)
+    )
+    Column(
+      modifier = Modifier.weight(1f)
+    ) {
+      Text(text = "Title", maxLines = 1)
+      Text(text = "Content", maxLines = 1)
+    }
+    Checkbox(
+      checked = false,
+      onCheckedChange = { },
+      modifier = Modifier.padding(start = 8.dp)
+    )
+  }
 }
 
 @Preview
