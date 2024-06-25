@@ -4,7 +4,6 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
@@ -21,12 +20,10 @@ fun NoteColor(
   modifier: Modifier = Modifier,
   color: Color,
   size: Dp,
-  padding: Dp = 0.dp,
   border: Dp,
 ) {
   Box(
     modifier = modifier
-      .padding(padding)
       .size(size)
       .clip(CircleShape)
       .background(color)
@@ -46,7 +43,6 @@ fun NoteColorPreview() {
   NoteColor(
     color = Color.Red,
     size = 40.dp,
-    padding = 4.dp,
     border = 2.dp
   )
 }
