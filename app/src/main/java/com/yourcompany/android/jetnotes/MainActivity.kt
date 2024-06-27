@@ -10,9 +10,12 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.ScaffoldState
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.yourcompany.android.jetnotes.routing.Screen
 import com.yourcompany.android.jetnotes.theme.JetNotesTheme
-import com.yourcompany.android.jetnotes.ui.components.Note
+import com.yourcompany.android.jetnotes.ui.screens.NotesScreen
 import com.yourcompany.android.jetnotes.viewmodel.MainViewModel
 import com.yourcompany.android.jetnotes.viewmodel.MainViewModelFactory
 import kotlinx.coroutines.launch
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity() {
       JetNotesTheme {
         val coroutineScope = rememberCoroutineScope()
         val scaffoldState: ScaffoldState = rememberScaffoldState()
+        val navController = rememberNavController()
         Scaffold(
           scaffoldState = scaffoldState,
           drawerContent = {
@@ -53,7 +57,9 @@ class MainActivity : AppCompatActivity() {
               })
           },
           content = {
-            Note()
+            NavHost(navController = navController, startDestination = Screen.Notes.route) {
+              composable(Screen.Notes.route) { NotesScreen(viewModel = viewModel) }
+            }
           }
         )
       }
